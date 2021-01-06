@@ -1,40 +1,33 @@
-console.log("Trabalhando com condicionais");
-const salvador = "Salvador";
-const saoPaulo = "São Paulo";
-const rioDeJaneiro = "Rio de Janeiro";
+console.log("\n Trabalhando com condicionais");
 
 const listaDeDestinos = new Array(`Salvador`, `São Paulo`, `Rio de Janeiro`);
 
 const idadeComprador = 15;
 const estaAcompanhada = true;
-console.log("Destinos possíveis:");
+let temPassagemComprada = true;
+const destino = "Salvador";
+
+console.log("\n Destinos possíveis:");
 console.log(listaDeDestinos);
 
-/* if (idadeComprador >= 18) {
-  console.log("Comprador maior de idade");
-  listaDeDestinos.splice(1, 1); // nao vende qd eh menor de idade
-} else if (estaAcompanhada) {
-  console.log("Comprador está comprando");
-  listaDeDestinos.splice(1, 1); // remove item
-} else {
-  console.log("Não é maior de idade não posso vender");
-} */
+const podeComprar = idadeComprador >= 18 || estaAcompanhada == true;
+
+let contador = 0;
+let destinoExiste = false;
+while (contador < 3) {  
+  if (listaDeDestinos[contador] == destino) {
+    destinoExiste = true;
+    break;
+  } 
+  contador += 1;
+}
 
 
-console.log("Embarque: \n \n")
-if (idadeComprador >= 18 || estaAcompanhada == true) {
-    console.log("Boa Viagem");
-    listaDeDestinos.splice(1, 1); // remove item
-} else {
-    console.log("Não é maior de idade não posso vender");
+for (let cont = 0 ; cont < 3; cont ++) {  
+    if (listaDeDestinos[contador] == destino) {
+      destinoExiste = true;
+    } 
+    contador += 1;
   }
 
-
-/* console.log(idadeComprador > 18);
-console.log(idadeComprador < 18);
-console.log(idadeComprador <= 18);
-console.log(idadeComprador >= 18);
-console.log(idadeComprador == 18);
- */
-//listaDeDestinos.splice(1,1); //removendo item compra
-console.log(listaDeDestinos);
+console.log("Destino existe", destinoExiste);

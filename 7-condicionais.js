@@ -21,7 +21,6 @@ console.log(listaDeDestinos);
 } */
 
 
-console.log("Embarque: \n \n")
 if (idadeComprador >= 18 || estaAcompanhada == true) {
     console.log("Boa Viagem");
     listaDeDestinos.splice(1, 1); // remove item
@@ -29,7 +28,12 @@ if (idadeComprador >= 18 || estaAcompanhada == true) {
     console.log("Não é maior de idade não posso vender");
   }
 
-
+  console.log("Embarque: \n \n");
+  if (idadeComprador >= 18 && estaAcompanhada == true) {
+    console.log("Boa Viagem");
+  } else {
+    console.log("Não pode embarcar");
+  }
 /* console.log(idadeComprador > 18);
 console.log(idadeComprador < 18);
 console.log(idadeComprador <= 18);
